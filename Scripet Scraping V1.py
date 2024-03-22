@@ -87,7 +87,8 @@ for url in urls:
                 phone_elem.click()  # Click on the element to display the phone numbers
                 wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".internal-breadcrumb, .popover-content")))
                 time.sleep(.5)  # Wait for 0.5 seconds after phone numbers are displayed
-
+                phone_elem = card.find_element(By.CSS_SELECTOR, ".rtl .fa-location-arrow, .rtl i.fa-phone")
+                 phone_elem.click()
                 # Find all phone number elements
                 phone_elems = driver.find_elements(By.CSS_SELECTOR, ".internal-breadcrumb, .popover-phones a")
                 
